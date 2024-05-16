@@ -1,0 +1,283 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+:root {
+    --tvoBlue: rgba(53, 126, 159, 1);
+    --tvoRed: rgba(237, 25, 68, 1);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    hyphens: auto;
+    color: white;
+    background-color: var(--tvoRed);
+}
+
+p, li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18pt;
+    line-height: 40px;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    line-height: 40px;
+    text-decoration: underline;
+    color: white;
+}
+
+h1{
+    font-size: 60pt;
+    font-weight: 100;
+}
+
+h2{
+    text-transform: uppercase;
+    hyphens: none;
+    margin: 20px 0 20px 0;
+    font-size: 30px;
+}
+
+h3{
+    margin: 30px 0 20px 0;
+}
+
+#menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    background-color: var(--tvoRed);
+    transition: all 0.3s ease;
+    z-index: +5;
+}
+
+#menu img{
+    filter: invert(1) saturate(0) contrast(100);
+    margin-left: 12vw;
+    margin-top: 11px;
+}
+
+#menu ul{
+    position: absolute;
+    right: 12vw;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    list-style: none;    
+}
+
+#menu li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+#menu a{
+    text-decoration: none;
+    font-size: 12pt;
+}
+
+.boost {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.statistics{
+    width: 100vw;
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 90px;
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+
+.news{
+    width: 100vw;
+    padding-left: 12vw;
+    padding-right: 12vw;
+}
+
+.news h1{
+    margin-bottom: 50px;
+}
+
+.newsWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.newsWrapper div{
+    margin-bottom: 10px;
+}
+
+.newsImage{
+    width: 100%;
+    aspect-ratio: 2;
+    border: 2px solid white;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.hambMenu{
+    display: none;
+}
+
+#hamburger{
+    display: none;
+    position: fixed;
+    right: 5vw;
+    top: 5vh;
+    z-index: +10;
+    filter: invert(1) saturate(0) contrast(100);
+}
+
+#cross{
+    position: absolute;
+    right: 5vw;
+    top: 5vh;
+    z-index: +11; 
+}
+
+#hamburger, #cross:hover{
+    cursor: pointer;
+}
+
+.hambMenu{
+    position: fixed;
+    width: 55vw;
+    height: 100dvh;
+    background-color: var(--tvoRed);
+    top: 0;
+    right: -55vw;
+    z-index: +10;
+}
+
+#dots{
+    text-align: center;
+    font-size: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 20px 0 20px 0;
+}
+
+#dots{
+    cursor: pointer;
+}
+
+.artI{
+    background-image: url("../images/artboardOne.jpg");
+}
+
+.artII{
+    background-image: url("../images/artboardTwo.jpg");
+}
+
+.artIII{
+    background-image: url("../images/artboardThree.jpg");
+}
+
+.artIV{
+    background-image: url("../images/artboardFour.jpg");
+}
+
+.artV{
+    background-image: url("../images/artboardFive.jpg");
+}
+
+.artVI{
+    background-image: url("../images/artboardSix.jpg");
+}
+
+.artVII{
+    background-image: url("../images/artboardSeven.jpg");
+}
+
+.artVIII{
+    background-image: url("../images/artboardEight.jpg");
+}
+
+.artIX{
+    background-image: url("../images/artboardNine.jpg");
+}
+
+.artX{
+    background-image: url("../images/artboardTen.jpg");
+}
+
+.menuLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30vh;
+}
+
+.menuLinks li{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    margin-bottom: 10vh;
+    font-size: 25px;
+}
+
+.menuLinks a{
+    text-decoration: none;
+
+}
+
+
+@media only screen and (max-width: 1200px){
+    p, li{
+        font-size: 16.5px;
+        line-height: 26px;
+    }
+
+    h1{
+        font-size: 60px;
+    }
+
+    .statistics{
+        grid-template-columns: 1fr;
+    }
+
+    .newsWrapper{
+        height: 160vh;
+        grid-template-columns: 1fr;
+    }
+
+    .news h1{
+        margin-bottom: 10px;
+    }
+
+
+}
+
+@media only screen and (max-width: 800px){
+    #menu{
+        display: none;
+    }
+
+    .hambMenu{
+        display: block;
+    }
+
+    #hamburger{
+        display: block;
+    }
+
+    .statistics{
+        padding-top: 30px;
+    }
+
+}
+

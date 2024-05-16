@@ -1,0 +1,259 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+}
+
+:root {
+    --tvoPurple: rgba(118, 49, 136, 1);
+    --tvoBlue: rgba(53, 126, 159, 1);
+    --tvoRed: rgba(237, 25, 68, 1);
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    hyphens: auto;
+    background-color: var(--tvoRed);
+    color: white;
+}
+
+#container{
+    padding-top: 100px;
+}
+
+p, li {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 18pt;
+    line-height: 40px;
+    color: white;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    line-height: 40px;
+    text-decoration: underline;
+    color: white;
+}
+
+h1{
+    font-size: 60pt;
+    font-weight: 100;
+    color: white;
+}
+
+h2{
+    text-transform: uppercase;
+    hyphens: none;
+    margin: 20px 0 20px 0;
+    font-size: 30px;
+    font-weight: 100;
+}
+
+h3{
+    margin: 30px 0 20px 0;
+}
+
+#menu {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: 50px;
+    width: 100vw;
+    background-color: var(--tvoPurple);
+    transition: all 0.3s ease;
+    z-index: +5;
+}
+
+#menu img{
+    filter: invert(1) saturate(0) contrast(100);
+    margin-left: 12vw;
+    margin-top: 11px;
+}
+
+#menu ul{
+    position: absolute;
+    right: 12vw;
+    display: flex;
+    flex-direction: row;
+    gap: 70px;
+    list-style: none;    
+}
+
+#menu li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+}
+
+#menu a{
+    text-decoration: none;
+    font-size: 12pt;
+}
+
+#hamburger{
+    display: none;
+    position: fixed;
+    right: 5vw;
+    top: 5dvh;
+    z-index: +10;
+}
+
+#cross{
+    position: absolute;
+    right: 5vw;
+    top: 5dvh;
+    z-index: +11; 
+}
+
+#hamburger, #cross:hover{
+    cursor: pointer;
+}
+
+.hambMenu{
+    position: fixed;
+    width: 55vw;
+    height: 100dvh;
+    background-color: var(--tvoPurple);
+    top: 0;
+    right: -55vw;
+    z-index: +10;
+}
+
+.menuLinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30dvh;
+}
+
+.menuLinks li{
+    font-family: Arial, Helvetica, sans-serif;
+    list-style: none;
+    margin-bottom: 10dvh;
+    font-size: 25px;
+}
+
+.menuLinks a{
+    text-decoration: none;
+}
+
+.topHead{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-right: 12vw;
+    padding-left: 12vw;
+    grid-gap: 50px;
+}
+
+.shift{
+    margin-left: 122px;
+}
+
+.topHead .box{
+    background-color: white;
+    border: 1px solid var(--tvoPurple);
+    border-radius: 30px;
+    padding: 30px;
+    margin: 0 0 50px 0;
+    transition: all 0.3s ease;
+    box-shadow: 0 20px 20px 1px rgba(153, 16, 43, 0.256);
+}
+
+.topHead .box p{
+    color: var(--tvoPurple);
+}
+
+.topHead .box:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+.vidContent{
+    padding-right: 12vw;
+    padding-left: 12vw;
+    padding-top: 50px;
+}
+
+.vidWrapper{
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+}
+
+.vidWrapper img{
+    width: 350px;
+    margin-right: 50px;
+}
+
+video{
+    border: 1px solid white;
+    border-radius: 30px;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 1200px){
+    p, li{
+        font-size: 16.5px;
+        line-height: 26px;
+    }
+
+    h1{
+        font-size: 60px;
+    }
+
+    #container{
+        margin-top: -75px;
+    }
+
+    .topHead{
+        grid-template-columns: 1fr;
+        grid-gap: 0px;
+    }
+
+    .topHead p{
+        margin-bottom: 50px;
+    }
+
+    .vidWrapper{
+        flex-direction: column;
+    }
+
+    .vidWrapper h1{
+        margin: 50px 0 50px 0;
+    }
+
+    .shift{
+        margin-left: 90px;
+    }
+
+    .box{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .box p{
+        margin-bottom: 0;
+    }
+
+}
+
+@media only screen and (max-width: 800px){
+    #menu{
+        display: none;
+    }
+
+    .hambMenu{
+        display: block;
+    }
+
+    #hamburger{
+        display: block;
+    }
+}
+  
+

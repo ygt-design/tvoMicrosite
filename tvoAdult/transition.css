@@ -1,0 +1,38 @@
+:root {
+    --tvoBlue: rgba(53, 126, 159, 1);
+    --tvoRed: rgba(237, 25, 68, 1);
+}
+
+
+.transition-1{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: +101;
+    background-color: var(--tvoRed);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 1s ease;
+}   
+
+.transition-1.is-active{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.transition-2{
+    position: fixed;
+    top: -100%;
+    left: 0;
+    right: 0;
+    height: 100%;
+    z-index: +101;
+    background-color: var(--tvoRed);
+    transition: all 1s ease;
+}
+    
+.transition-2.is-active{
+    top: 0px;
+}

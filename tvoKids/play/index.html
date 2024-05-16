@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> TVO CBI KIDS – PLAY </title>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E="
+    crossorigin="anonymous"></script>
+  <script src="libraries/p5.min.js"></script>
+  <script src="libraries/p5.sound.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="../transition.css">
+
+  <script defer src="../script.js"></script>
+  <script defer src="../transition.js"></script>
+  <script defer src="sketch.js"></script>
+
+</head>
+
+<body>
+  <div class="transition transition-2 is-active">
+    <div class="circleWrap">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+  </div>
+
+  <img id="hamburger" src="../images/hambWhite.svg" alt="Hamburger menu icon">
+  <div class="hambMenu">
+    <img id="cross" src="../images/cross.svg" alt="Close menu icon">
+    <div class="menuLinks">
+      <ul>
+        <a href="../index.html">
+          <li> HOME </li>
+        </a>
+        <a href="index.html">
+          <li> PLAY </li>
+        </a>
+        <a href="../help/index.html">
+          <li> HELP </li>
+        </a>
+        <a href="../prevent/index.html">
+          <li> PREVENT </li>
+        </a>
+      </ul>
+    </div>
+  </div>
+
+  <div id="menu">
+    <a href="../index.html">
+      <img src="../images/logoRed_old.svg" alt="TVO Kids logo" width="50px">
+    </a>
+    <ul>
+      <a href="index.html">
+        <li> PLAY </li>
+      </a>
+      <a href="../help/index.html">
+        <li> HELP </li>
+      </a>
+      <a href="../prevent/index.html">
+        <li> PREVENT </li>
+      </a>
+    </ul>
+  </div>
+
+  <div class="wrapper">
+    <div class="header">
+      <h1> LET'S <br>
+        <span class="shift"> PLAY </span>
+      </h1>
+    </div>
+    <div class="image">
+      <img src="../images/finish.svg" alt="Finish line illustration">
+    </div>
+
+  </div>
+
+  <canvas id="ticTacCanvas" title="Interactive Tic Tac Toe game"></canvas>
+
+</body>
+
+</html>
